@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      width: 360px;
+      height: 500px;
+      resize: both;
+      overflow: hidden;
+    }
+
+    #chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #chat {
+      flex: 1;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+
+    .message {
+      margin: 10px 0;
+      word-wrap: break-word;
+    }
+
+    .user {
+      text-align: right;
+      color: #333;
+    }
+
+    .bot {
+      text-align: left;
+      color: #0073e6;
+    }
+
+    #controls {
+      display: flex;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    #input {
+      flex: 1;
+      padding: 5px;
+    }
+
+    #send, #copy {
+      padding: 5px 10px;
+    }
+
+    #status, #copy-status {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="chat"></div>
+
+    <div id="controls">
+      <input id="input" placeholder="Type your message..." />
+      <button id="send">Send</button>
+    </div>
+
+    <div id="status"></div>
+    <button id="copy">Copy Last</button>
+    <div id="copy-status" style="color: green;"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
