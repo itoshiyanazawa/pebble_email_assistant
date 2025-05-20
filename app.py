@@ -9,7 +9,7 @@ CORS(app)
 # Setup NVIDIA API client
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key="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"
+    api_key="YOUR_API_KEY"
 )
 
 @app.route("/revise", methods=["POST"])
